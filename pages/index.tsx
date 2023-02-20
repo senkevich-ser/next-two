@@ -1,9 +1,14 @@
-import Head from 'next/head';
-import { Inter } from '@next/font/google';
-import styles from '@/styles/Home.module.css';
-import cn from 'classnames';
+import Head from "next/head";
+import { Montserrat } from "@next/font/google";
+import styles from "@/styles/Home.module.css";
+import cn from "classnames";
+import HTag from "@/components/HTag/HTag";
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -14,7 +19,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={cn(styles.main,inter.className)}>
+      <main className={cn(styles.main, montserrat.className)}>
+        <HTag tag="h1">Big text</HTag>
+        <HTag tag="h2">Big text</HTag>
+        <HTag tag="h3">Big text</HTag>
       </main>
     </>
   );

@@ -1,53 +1,25 @@
-/* stylelint-disable order/properties-order */
 .button{
-    display: inline-block; 
-    
-    box-sizing: border-box;
-    padding: 10px;
+	cursor: pointer;
 
-    cursor: pointer;
+	display: inline-block;
 
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: all 0.2s;
+	box-sizing: border-box;
+	padding: 11px;
+
+	font-size: 14px;
+	line-height: 14px;
+	text-align: center;
+
+	border: none;
+	border-radius: 5px;
+	
 }
 
 .primary{
-    color: var(--white);
-    background-color: var(--primary);
+	background-color: var(--primary);	
 }
 
 .ghost{
-    color:var(--black);
-    background:none;
-    border: 1px solid var(--gray-light);
+	border: 1px var(--primary) solid;
 }
-
-.primary:hover{
-    background-color: #4a22e9;
-}  
-
-.ghost:hover{
-    background-color: var(--primary);
-    color: var(--white);
-}  
-
-.arrow{
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.down{
-    transform: rotate(90deg);
-    transition: all 0.2s;
-}
-
-.primary svg ,
-.ghost:hover svg {
-    fill: var(--white);
-    
-}
-
 

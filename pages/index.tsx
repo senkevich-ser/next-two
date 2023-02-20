@@ -3,6 +3,7 @@ import { Montserrat } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import cn from "classnames";
 import HTag from "@/components/HTag/HTag";
+import Button from "@/components/Button/Button";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
@@ -23,6 +24,9 @@ export default function Home() {
         <HTag tag="h1">Big text</HTag>
         <HTag tag="h2">Big text</HTag>
         <HTag tag="h3">Big text</HTag>
+        <Button>Кнопка</Button>
+        <Button arrow={'down'} appearance={'primary'}>Кнопка</Button>
+        <Button arrow={'right'} appearance={'ghost'}>Кнопка</Button>
       </main>
     </>
   );

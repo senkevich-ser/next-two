@@ -29,9 +29,9 @@
 
 .primary:hover svg,
 .primary:hover{
-	fill:var(--primary);
 	color:	var(--primary);
-	background-color: var(--white);	
+	background-color: var(--white);
+	fill:var(--primary);	
 }
 
 .ghost{
@@ -40,8 +40,8 @@
 }
 
 .ghost:hover{
-	background-color: var(--primary);
 	color:var(--white);
+	background-color: var(--primary);
 }
 
 .arrow{

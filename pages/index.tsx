@@ -5,6 +5,7 @@ import cn from "classnames";
 import HTag from "@/components/HTag/HTag";
 import Button from "@/components/Button/Button";
 import Paragraph from "@/components/Paragraph/Paragraph";
+import Tag from "@/components/Tag/Tag";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
@@ -43,6 +44,10 @@ export default function Home() {
         Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
         Proident reprehenderit ex ipsum tempor. 
         Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
+        <Tag size={'small'} color={'ghost'}>Small Ghost</Tag>
+        <Tag size={'small'} color={'primary'}>Small Primary</Tag>
+        <Tag size={'large'} color={'red'}>Large Red</Tag>
+        <Tag size={'large'} color={'grey'}>Large Grey</Tag>
       </main>
     </>
   );

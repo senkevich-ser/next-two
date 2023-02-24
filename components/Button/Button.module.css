@@ -26,12 +26,15 @@
 	fill:var(--white);	
 }
 
+.primary:hover svg{
+	fill:var(--primary);	
+	transition: all 0.5s;
+}
 
-.primary:hover svg,
+
 .primary:hover{
 	color:	var(--primary);
 	background-color: var(--white);
-	fill:var(--primary);	
 }
 
 .ghost{

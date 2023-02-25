@@ -15,8 +15,9 @@ const montserrat = Montserrat({
 });
 
 export default function Home() {
-  const [primaryBtnDirection, setPrimaryBtnDirection] = useState<boolean>(true);
-  const [ghostBtnDirection, setGhostBtnDirection] = useState<boolean>(true);
+
+  const[direction,setDirection]=useState<string>('right');
+
   return (
     <>
       <Head>
@@ -29,48 +30,28 @@ export default function Home() {
         <HTag tag="h1">Big text</HTag>
         <HTag tag="h2">Big text</HTag>
         <HTag tag="h3">Big text</HTag>
-        <Button arrow={primaryBtnDirection?"right":'down'} appearance={"ghost"} onClick={()=>setPrimaryBtnDirection(!primaryBtnDirection)}>
-          Кнопка
-        </Button>
-        <Button arrow={ghostBtnDirection?"right":'down'} appearance={"primary"} onClick={()=>setGhostBtnDirection(!ghostBtnDirection)} >
-          Кнопка
-        </Button>
-        <Paragraph size={"small"}>
-          Et in qui deserunt fugiat veniam nostrud pariatur. Velit exercitation
-          minim veniam sunt sunt eu ea id cillum. Reprehenderit cillum nostrud
-          mollit commodo duis laboris fugiat deserunt ut ex amet incididunt
-          excepteur nulla. Proident reprehenderit ex ipsum tempor. Est occaecat
-          qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam
-          proident eiusmod.
-        </Paragraph>
-        <Paragraph size={"medium"}>
-          Et in qui deserunt fugiat veniam nostrud pariatur. Velit exercitation
-          minim veniam sunt sunt eu ea id cillum. Reprehenderit cillum nostrud
-          mollit commodo duis laboris fugiat deserunt ut ex amet incididunt
-          excepteur nulla. Proident reprehenderit ex ipsum tempor. Est occaecat
-          qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam
-          proident eiusmod.
-        </Paragraph>
-        <Paragraph size={"large"}>
-          Et in qui deserunt fugiat veniam nostrud pariatur. Velit exercitation
-          minim veniam sunt sunt eu ea id cillum. Reprehenderit cillum nostrud
-          mollit commodo duis laboris fugiat deserunt ut ex amet incididunt
-          excepteur nulla. Proident reprehenderit ex ipsum tempor. Est occaecat
-          qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam
-          proident eiusmod.
-        </Paragraph>
-        <Tag size={"small"} color={"ghost"}>
-          Small Ghost
-        </Tag>
-        <Tag size={"small"} color={"primary"}>
-          Small Primary
-        </Tag>
-        <Tag size={"large"} color={"red"}>
-          Large Red
-        </Tag>
-        <Tag size={"large"} color={"grey"}>
-          Large Grey
-        </Tag>
+        <Button>Кнопка</Button>
+        <Button arrow={direction} appearance={'primary'}>Кнопка</Button>
+        <Button arrow={direction} appearance={'ghost'}>Кнопка</Button>
+        <Paragraph size={'small'} >Et in qui deserunt fugiat veniam nostrud pariatur.
+        Velit exercitation minim veniam sunt sunt eu ea id cillum. 
+        Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
+        Proident reprehenderit ex ipsum tempor. 
+        Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
+        <Paragraph size={'medium'} >Et in qui deserunt fugiat veniam nostrud pariatur.
+        Velit exercitation minim veniam sunt sunt eu ea id cillum. 
+        Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
+        Proident reprehenderit ex ipsum tempor. 
+        Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
+        <Paragraph size={'large'} >Et in qui deserunt fugiat veniam nostrud pariatur.
+        Velit exercitation minim veniam sunt sunt eu ea id cillum. 
+        Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
+        Proident reprehenderit ex ipsum tempor. 
+        Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
+        <Tag size={'small'} color={'ghost'}>Small Ghost</Tag>
+        <Tag size={'small'} color={'primary'}>Small Primary</Tag>
+        <Tag size={'large'} color={'red'}>Large Red</Tag>
+        <Tag size={'large'} color={'grey'}>Large Grey</Tag>
       </main>
     </>
   );

@@ -7,6 +7,7 @@ import Button from "@/components/Button/Button";
 import Paragraph from "@/components/Paragraph/Paragraph";
 import Tag from "@/components/Tag/Tag";
 import { useState } from "react";
+import Rating from "@/components/Rating/Rating";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
@@ -53,6 +54,7 @@ export default function Home() {
         <Tag size={'small'} color={'primary'}>Small Primary</Tag>
         <Tag size={'large'} color={'red'}>Large Red</Tag>
         <Tag size={'large'} color={'grey'}>Large Grey</Tag>
+        <Rating rating={4}/>
       </main>
     </>
   );

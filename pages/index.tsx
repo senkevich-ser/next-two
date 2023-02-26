@@ -1,24 +1,18 @@
 import Head from "next/head";
-import { Montserrat } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
-import cn from "classnames";
 import HTag from "@/components/HTag/HTag";
 import Button from "@/components/Button/Button";
 import Paragraph from "@/components/Paragraph/Paragraph";
 import Tag from "@/components/Tag/Tag";
 import { useState } from "react";
 import Rating from "@/components/Rating/Rating";
+import { withLayout } from "@/components/Layout/Layout";
 
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 
-export default function Home() {
+ function Home() {
 
   const[directionPrimary,setDirectionPrimary]=useState<boolean>(true);
   const[directionGhost,setDirectionGhost]=useState<boolean>(true);
+  const[rating,setRating]=useState<number>(4);
 
   return (
     <>
@@ -28,7 +22,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={cn(styles.main, montserrat.className)}>
+      <>
         <HTag tag="h1">Big text</HTag>
         <HTag tag="h2">Big text</HTag>
         <HTag tag="h3">Big text</HTag>
@@ -54,8 +48,11 @@ export default function Home() {
         <Tag size={'small'} color={'primary'}>Small Primary</Tag>
         <Tag size={'large'} color={'red'}>Large Red</Tag>
         <Tag size={'large'} color={'grey'}>Large Grey</Tag>
-        <Rating rating={4}/>
-      </main>
+        <Rating rating={rating} isEditable={true} setRating={setRating}/>
+      </>
     </>
   );
 }
+export default withLayout(Home);
+
+

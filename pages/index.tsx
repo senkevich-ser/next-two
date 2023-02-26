@@ -16,7 +16,8 @@ const montserrat = Montserrat({
 
 export default function Home() {
 
-  const[direction,setDirection]=useState<string>('right');
+  const[directionPrimary,setDirectionPrimary]=useState<boolean>(true);
+  const[directionGhost,setDirectionGhost]=useState<boolean>(true);
 
   return (
     <>
@@ -31,8 +32,8 @@ export default function Home() {
         <HTag tag="h2">Big text</HTag>
         <HTag tag="h3">Big text</HTag>
         <Button>Кнопка</Button>
-        <Button arrow={direction} appearance={'primary'}>Кнопка</Button>
-        <Button arrow={direction} appearance={'ghost'}>Кнопка</Button>
+        <Button arrow={directionPrimary?'right':'down'} appearance={'primary'} onClick={()=>setDirectionPrimary(!directionPrimary)}>Кнопка</Button>
+        <Button arrow={directionGhost?'right':'down'} appearance={'ghost'} onClick={()=>setDirectionGhost(!directionGhost)}>Кнопка</Button>
         <Paragraph size={'small'} >Et in qui deserunt fugiat veniam nostrud pariatur.
         Velit exercitation minim veniam sunt sunt eu ea id cillum. 
         Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 

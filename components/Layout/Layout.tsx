@@ -16,10 +16,12 @@ const montserrat = Montserrat({
 function Layout({ children, ...props }: LayoutProps): JSX.Element {
   return (
     <div className={cn(styles.wrapper, montserrat.className)} {...props}>
-      <Header />
-      <Sidebar />
+      <Header className={styles.header}/>
+      <Sidebar className={styles.sidebar}/>
+      <div className={styles.body}>
       {children}
-      <Footer />
+      </div>
+      <Footer className={styles.footer}/>
     </div>
   );
 }

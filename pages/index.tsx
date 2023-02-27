@@ -29,21 +29,9 @@ import { withLayout } from "@/components/Layout/Layout";
         <Button>Кнопка</Button>
         <Button arrow={directionPrimary?'right':'down'} appearance={'primary'} onClick={()=>setDirectionPrimary(!directionPrimary)}>Кнопка</Button>
         <Button arrow={directionGhost?'right':'down'} appearance={'ghost'} onClick={()=>setDirectionGhost(!directionGhost)}>Кнопка</Button>
-        <Paragraph size={'small'} >Et in qui deserunt fugiat veniam nostrud pariatur.
-        Velit exercitation minim veniam sunt sunt eu ea id cillum. 
-        Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
-        Proident reprehenderit ex ipsum tempor. 
-        Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
-        <Paragraph size={'medium'} >Et in qui deserunt fugiat veniam nostrud pariatur.
-        Velit exercitation minim veniam sunt sunt eu ea id cillum. 
-        Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
-        Proident reprehenderit ex ipsum tempor. 
-        Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
-        <Paragraph size={'large'} >Et in qui deserunt fugiat veniam nostrud pariatur.
-        Velit exercitation minim veniam sunt sunt eu ea id cillum. 
-        Reprehenderit cillum nostrud mollit commodo duis laboris fugiat deserunt ut ex amet incididunt excepteur nulla. 
-        Proident reprehenderit ex ipsum tempor. 
-        Est occaecat qui tempor aliquip culpa do ex sunt nisi cupidatat fugiat veniam proident eiusmod.</Paragraph>
+        <Paragraph size={'small'} >Small paragraph</Paragraph>
+        <Paragraph size={'medium'} >Medium paragraph</Paragraph>
+        <Paragraph size={'large'} >Large paragraph</Paragraph>
         <Tag size={'small'} color={'ghost'}>Small Ghost</Tag>
         <Tag size={'small'} color={'primary'}>Small Primary</Tag>
         <Tag size={'large'} color={'red'}>Large Red</Tag>

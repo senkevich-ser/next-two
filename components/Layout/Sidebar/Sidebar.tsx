@@ -1,6 +1,7 @@
 import { SidebarProps } from "./Sidebar.props";
 import styles from "./Sidebar.module.css";
 import cn from "classnames";
+import Menu from "../Menu/Menu";
 
 export default function Sidebar({
   ...props
@@ -9,7 +10,8 @@ export default function Sidebar({
     <div
       className={cn(styles.sidebar)}
       {...props}
-    >Sidebar
+    >
+      <Menu/>
     </div>
   );
 }

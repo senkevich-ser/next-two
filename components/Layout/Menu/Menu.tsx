@@ -62,26 +62,26 @@ export default function Menu(): JSX.Element {
     );
   };
 
-  const buildSecondLevel = (menuItem:buildSecondLevel ) => {
-    return <>
+  const buildSecondLevel = (menuItem:FirstLevelMenuItem ) => {
+    return <div className={styles.secondblock}>
     {menu.map(m=>(
       <div key={m._id.secondCategory}>
-        <div className={styles.secondLevel}>{m._id.secondCategory}</div>
-        <div className={cn(styles.secondLevelBlock,{
-          [styles.secondLevelBlockOpened]:m.isOpen
+        <div className={styles.secondlevel}>{m._id.secondCategory}</div>
+        <div className={cn(styles.secondlevelblock,{
+          [styles.secondlevelblockopened]:m.isOpen
         })}>
           {buildThirdLevel(m.pages,menuItem.route)}
         </div>
       </div>
     ))}
-    </>;
+    </div>;
   };
 
   const buildThirdLevel = (pages:PageItem[],route:string) => {
     return <>
     {pages.map(p=>(
-      <a key={p._id} href={`/${route}/${p.alias}`} className={cn(styles.thirdLevel,{
-        [styles.thirdLevelActive]:true
+      <a key={p._id} href={`/${route}/${p.alias}`} className={cn(styles.thirdlevel,{
+        [styles.thirdlevelactive]:false
       })}>
         {p.title}
       </a>

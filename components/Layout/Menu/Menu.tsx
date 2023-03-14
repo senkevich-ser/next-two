@@ -9,6 +9,7 @@ import CoursesIcon from "./icons/courses.svg";
 import ServicesIcon from "./icons/services.svg";
 import BooksIcon from "./icons/books.svg";
 import ProductsIcon from "./icons/products.svg";
+import { useRouter } from "next/router";
 
 const firstLevelMenu: FirstLevelMenuItem[] = [
   {
@@ -40,6 +41,8 @@ const firstLevelMenu: FirstLevelMenuItem[] = [
 export default function Menu(): JSX.Element {
   const { menu, firstCategory, setMenu } = useContext(AppContext);
 
+  const router = useRouter();
+
   const buildFirstLevel = () => {
     return (
       <>
@@ -64,7 +67,12 @@ export default function Menu(): JSX.Element {
 
   const buildSecondLevel = (menuItem:FirstLevelMenuItem ) => {
     return <div className={styles.secondblock}>
-    {menu.map(m=>(
+    {menu.map(m=>{
+
+      if(m.pages.map(p=>p.alias).includes(router.asPath.split('/')[2])){
+        m.isOpen=!m.isOpen;
+      }
+      return(
       <div key={m._id.secondCategory}>
         <div className={styles.secondlevel}>{m._id.secondCategory}</div>
         <div className={cn(styles.secondlevelblock,{
@@ -73,7 +81,8 @@ export default function Menu(): JSX.Element {
           {buildThirdLevel(m.pages,menuItem.route)}
         </div>
       </div>
-    ))}
+  );}
+  )}
     </div>;
   };
 

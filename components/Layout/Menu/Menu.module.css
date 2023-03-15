@@ -1,5 +1,4 @@
 .firstlevel{
-
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: 20px;
@@ -45,14 +44,21 @@
 }
 
 .secondlevelblock{
-	
+	display:none;
+}
+
+.secondlevelblockopened{
+	display: block;
 }
 
 .secondlevelblockopened:last-child{
 	margin-bottom: 20px;
 }
 
+
 .thirdlevel{
+	cursor: pointer;
+
 	display: block;
 
 	margin-bottom: 10px;
@@ -61,7 +67,6 @@
 	font-weight: 600;
 	line-height: 19px;
 	color:var(--dark-grey);
-	cursor: pointer;
 }
 
 .thirdlevelactive,.thirdlevel:hover{

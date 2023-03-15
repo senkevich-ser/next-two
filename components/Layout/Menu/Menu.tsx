@@ -1,6 +1,5 @@
 import styles from "./Menu.module.css";
 import cn from "classnames";
-import { format } from "date-fns";
 import { AppContext } from "@/context/app.context";
 import { useContext } from "react";
 import { FirstLevelMenuItem, PageItem } from "@/interfaces/menu.interface";
@@ -43,6 +42,15 @@ export default function Menu(): JSX.Element {
 
   const router = useRouter();
 
+  const openSecondLevel=(secondCategory:string)=>{
+    setMenu && setMenu(menu.map(m=>{
+      if(m._id.secondCategory==secondCategory){
+        m.isOpen=!m.isOpen;
+      }
+      return m;
+    }));
+  };
+
   const buildFirstLevel = () => {
     return (
       <>
@@ -74,7 +82,7 @@ export default function Menu(): JSX.Element {
       }
       return(
       <div key={m._id.secondCategory}>
-        <div className={styles.secondlevel}>{m._id.secondCategory}</div>
+        <div className={styles.secondlevel} onClick={()=>openSecondLevel(m._id.secondCategory)}>{m._id.secondCategory}</div>
         <div className={cn(styles.secondlevelblock,{
           [styles.secondlevelblockopened]:m.isOpen
         })}>
@@ -90,7 +98,7 @@ export default function Menu(): JSX.Element {
     return <>
     {pages.map(p=>(
       <a key={p._id} href={`/${route}/${p.alias}`} className={cn(styles.thirdlevel,{
-        [styles.thirdlevelactive]:false
+        [styles.thirdlevelactive]:`/${route}/${p.alias}`==router.asPath
       })}>
         {p.title}
       </a>

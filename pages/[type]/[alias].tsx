@@ -56,13 +56,19 @@ export const getStaticProps: GetStaticProps = async ({params}:GetStaticPropsCont
       notFound:true
     };
   }
-
+try{
   const { data: menu } = await axios.post<MenuItem[]>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
     {
       firstCategory:firstLevelMenuItem.id,
     }
   );
+
+  if(menu.length==0){
+    return{
+      notFound:true
+    };
+  }
   const { data: page } = await axios.get<TopPageModel>(
     process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/byAlias/"+ params.alias
   );
@@ -74,8 +80,6 @@ export const getStaticProps: GetStaticProps = async ({params}:GetStaticPropsCont
     }
   );
   
-
-
   return {
     props: {
       menu,
@@ -84,6 +88,12 @@ export const getStaticProps: GetStaticProps = async ({params}:GetStaticPropsCont
       products
     },
   };
+} catch{
+  return{
+    notFound:true
+  };
+}
+  
 };
 
 interface CourseProps extends Record<string, unknown> {

@@ -10,15 +10,16 @@ import { ParsedUrlQuery } from "querystring";
 import { firstLevelMenu } from "@/helpers/helpers";
 
 
-function Course({ menu,page,products}: CourseProps) {
+function Course({ menu,page,products,title}: CourseProps) {
   
   return (
     <>
       <Head>
-        <title>Aliases</title>
+        <title>{title}</title>
       </Head>
+      <h1>{title}</h1>
      <ul>
-      {products&&products.map(p=><span key={p._id}>{p.title}</span>)}
+      {products&&products.map(p=><li key={p._id}>{p.title}</li>)}
      </ul>
     </>
   );
@@ -85,7 +86,8 @@ try{
       menu,
       firstCategory:firstLevelMenuItem.id,
       page,
-      products
+      products,
+      title:page.title
     },
   };
 } catch{
@@ -101,4 +103,5 @@ interface CourseProps extends Record<string, unknown> {
   firstCategory: TopLevelCategory;
   page:TopPageModel;
   products:ProductModel[];
+  title:string;
 }

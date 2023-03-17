@@ -4,14 +4,14 @@ import axios from "axios";
 import { GetStaticProps } from "next";
 import { MenuItem } from "../interfaces/menu.interface";
 
-function Search() {
+function Search({firstCategory}:HomeProps) {
 
   return (
     <>
       <Head>
         <title>Search</title>
       </Head>
-     <h1>Super Search</h1>
+     <h1>Super Search {firstCategory}</h1>
     </>
   );
 }

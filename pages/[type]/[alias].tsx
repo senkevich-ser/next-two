@@ -10,7 +10,7 @@ import { ParsedUrlQuery } from "querystring";
 import { firstLevelMenu } from "@/helpers/helpers";
 
 
-function Course({ menu,page,products,title}: CourseProps) {
+function Course({products,title}: CourseProps) {
   
   return (
     <>

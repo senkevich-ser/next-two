@@ -8,23 +8,19 @@ import { ProductModel } from "@/interfaces/product.interface";
 import { TopLevelCategory, TopPageModel } from "@/interfaces/page.interface";
 import { ParsedUrlQuery } from "querystring";
 import { firstLevelMenu } from "@/helpers/helpers";
+import TopPageComponent from "@/page-components/TopPageComponents/TopPageComponent";
 
 
-function Course({products,title}: CourseProps) {
+
+function TopPage({firstCategory,page,products,title}: TopPageProps) {
   
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <h1>{title}</h1>
-     <ul>
-      {products&&products.map(p=><li key={p._id}>{p.title}</li>)}
-     </ul>
+     <TopPageComponent firstCategory={firstCategory} page={page} products={products} title={title}/>
     </>
   );
 }
-export default withLayout(Course);
+export default withLayout(TopPage);
 
 export const getStaticPaths:GetStaticPaths=async ()=>{
   let paths:string[]=[];
@@ -98,7 +94,7 @@ try{
   
 };
 
-interface CourseProps extends Record<string, unknown> {
+interface TopPageProps extends Record<string, unknown> {
   menu: MenuItem[];
   firstCategory: TopLevelCategory;
   page:TopPageModel;

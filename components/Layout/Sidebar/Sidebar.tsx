@@ -12,9 +12,9 @@ export default function Sidebar({
     <div
       className={cn(className,styles.sidebar)}
       {...props}
-    >
+    ><Link href={'/'}>
       <Logo className={styles.logo}/>
-
+      </Link>
       <h3>Поиск</h3>
       <Menu/>
     </div>

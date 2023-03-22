@@ -2,18 +2,28 @@ import { TopPageComponentProps } from "./TopPageComponent.props";
 import styles from './TopPageComponent.module.css';
 import cn from 'classnames';
 import Head from "next/head";
+import HTag from "@/components/HTag/HTag";
+import Tag from "@/components/Tag/Tag";
 
 
-export default function TopPageComponent({firstCategory,page,products,title}:TopPageComponentProps):JSX.Element{
+export default function TopPageComponent({firstCategory,page,products}:TopPageComponentProps):JSX.Element{
 return(
-    <>
+    <div className={styles.wrapper}>
      <Head>
-        <title>{title}</title>
+        <title>{page.title}</title>
       </Head>
-      <h1>{title}</h1>
-     <ul>
-      {products&&products.map(p=><li key={p._id}>{p.title}</li>)}
-     </ul>
-    </>
+      <div className={styles.title}>
+        <HTag tag='h1'>{page.title}</HTag>
+        {products &&<Tag color="grey" size="large">{products.length}</Tag>}
+        <span>Сортировка</span>
+      </div>
+     <div className={styles.products}>
+      {products&&products.map(p=><div key={p._id}>{p.title}</div>)}
+     </div>
+     <div className={styles.hhTitle}>
+        <HTag tag='h2'>Вакансии - {page.category}</HTag>
+        <Tag color="red" size='large'>hh.ru</Tag>
+      </div>
+    </div>
 );
 }

@@ -4,6 +4,7 @@ import cn from 'classnames';
 import Head from "next/head";
 import HTag from "@/components/HTag/HTag";
 import Tag from "@/components/Tag/Tag";
+import HhData from "@/components/HhData/HhData";
 
 
 export default function TopPageComponent({firstCategory,page,products}:TopPageComponentProps):JSX.Element{
@@ -24,6 +25,7 @@ return(
         <HTag tag='h2'>Вакансии - {page.category}</HTag>
         <Tag color="red" size='large'>hh.ru</Tag>
       </div>
+      <HhData {...page.hh}/>
     </div>
 );
 }

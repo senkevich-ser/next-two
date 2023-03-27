@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import { withLayout } from "@/components/Layout/Layout";
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
@@ -16,7 +14,7 @@ function TopPage({firstCategory,page,products}: TopPageProps) {
   
   return (
     <>
-     <TopPageComponent firstCategory={firstCategory} page={page} products={products}/>
+    {page &&  <TopPageComponent firstCategory={firstCategory} page={page} products={products}/>}
     </>
   );
 }

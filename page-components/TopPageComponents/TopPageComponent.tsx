@@ -25,7 +25,7 @@ return(
         <HTag tag='h2'>Вакансии - {page.category}</HTag>
         <Tag color="red" size='large'>hh.ru</Tag>
       </div>
-      <HhData {...page.hh}/>
+      {page.hh && <HhData {...page.hh}/>}
     </div>
 );
 }

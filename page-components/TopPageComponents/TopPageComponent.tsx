@@ -5,6 +5,8 @@ import Head from "next/head";
 import HTag from "@/components/HTag/HTag";
 import Tag from "@/components/Tag/Tag";
 import HhData from "@/components/HhData/HhData";
+import Advantages from "@/components/Advantages/Advantages";
+import Paragraph from "@/components/Paragraph/Paragraph";
 
 
 export default function TopPageComponent({firstCategory,page,products}:TopPageComponentProps):JSX.Element{
@@ -25,7 +27,12 @@ return(
         <HTag tag='h2'>Вакансии - {page.category}</HTag>
         <Tag color="red" size='large'>hh.ru</Tag>
       </div>
-      {page.hh && <HhData {...page.hh}/>}
+      {page.hh && page.hh && <HhData {...page.hh}/>}
+      <HTag tag='h2'>Преимущества</HTag>
+      {page.advantages &&<Advantages advantages={page.advantages}/>}
+      {page.seoText && <Paragraph>{page.seoText}</Paragraph>}
+      <HTag tag='h2'>Получаемые навыки</HTag>
+      {page.tags && page.tags.map(t=>(<Tag color="primary">{t}</Tag>))}
     </div>
 );
 }

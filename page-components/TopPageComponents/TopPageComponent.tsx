@@ -30,7 +30,7 @@ return(
       {page.hh && page.hh && <HhData {...page.hh}/>}
       <HTag tag='h2'>Преимущества</HTag>
       {page.advantages &&<Advantages advantages={page.advantages}/>}
-      {page.seoText && <Paragraph>{page.seoText}</Paragraph>}
+      {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html:page.seoText}}></div>}
       <HTag tag='h2'>Получаемые навыки</HTag>
       {page.tags && page.tags.map(t=>(<Tag color="primary">{t}</Tag>))}
     </div>

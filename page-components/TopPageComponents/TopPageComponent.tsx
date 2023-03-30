@@ -32,7 +32,7 @@ return(
       {page.advantages &&<Advantages advantages={page.advantages}/>}
       {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html:page.seoText}}></div>}
       <HTag tag='h2'>Получаемые навыки</HTag>
-      {page.tags && page.tags.map(t=>(<Tag color="primary">{t}</Tag>))}
+      {page.tags && page.tags.map(t=>(<Tag color="primary" key={t}>{t}</Tag>))}
     </div>
 );
 }

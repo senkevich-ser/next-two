@@ -10,6 +10,7 @@ export default function HhData({
   juniorSalary,
   middleSalary,
   seniorSalary,
+  updatedAt,
   ...props
 }: HhDataProps): JSX.Element {
   return (

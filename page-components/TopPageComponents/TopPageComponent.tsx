@@ -7,6 +7,8 @@ import Tag from "@/components/Tag/Tag";
 import HhData from "@/components/HhData/HhData";
 import Advantages from "@/components/Advantages/Advantages";
 import Paragraph from "@/components/Paragraph/Paragraph";
+import Sort from "@/components/Sort/Sort";
+import { SortEnum } from "@/components/Sort/Sort.props";
 
 
 export default function TopPageComponent({firstCategory,page,products}:TopPageComponentProps):JSX.Element{
@@ -18,7 +20,7 @@ return(
       <div className={styles.title}>
         <HTag tag='h1'>{page.title}</HTag>
         {products &&<Tag color="grey" size="large">{products.length}</Tag>}
-        <span>Сортировка</span>
+      <Sort sort={SortEnum.Rating} setSort={()=>{}}/>
       </div>
      <div className={styles.products}>
       {products&&products.map(p=><div key={p._id}>{p.title}</div>)}

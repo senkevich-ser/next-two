@@ -9,8 +9,8 @@ export interface SortReducerState {
 }
 
 export const sortReducer = (
+  state: SortReducerState,
   action: SortActions,
-  state: SortReducerState
 ): SortReducerState => {
   switch (action.type) {
     case SortEnum.Price:

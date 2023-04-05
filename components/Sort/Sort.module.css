@@ -15,16 +15,22 @@
 
 .sort{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: auto auto;
 	gap:40px;
 	align-items: center;
 }
 
-.sort span{
+.sort span{	
+	cursor: pointer;
+
 	display: grid;
 	grid-template-columns: 20px 1fr;
-	gap:20px;	
+	gap:20px;
 	align-items: center;
+}
+
+.sort span:not(.active){
+	grid-template-columns: 1fr;
 }
 
 

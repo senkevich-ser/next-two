@@ -9,6 +9,7 @@ import { withLayout } from "@/components/Layout/Layout";
 import axios from "axios";
 import { GetStaticProps } from "next";
 import { MenuItem } from "../interfaces/menu.interface";
+import Input from "@/components/Input/Input";
 
 function Home({ menu, firstCategory }: HomeProps) {
   const [directionPrimary, setDirectionPrimary] = useState<boolean>(true);
@@ -58,6 +59,7 @@ function Home({ menu, firstCategory }: HomeProps) {
           Large Grey
         </Tag>
         <Rating rating={rating} isEditable={true} setRating={setRating} />
+        <Input placeholder="Test"/>
       </>
     </>
   );

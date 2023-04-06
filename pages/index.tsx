@@ -10,6 +10,7 @@ import axios from "axios";
 import { GetStaticProps } from "next";
 import { MenuItem } from "../interfaces/menu.interface";
 import Input from "@/components/Input/Input";
+import Textarea from "@/components/Textarea/Textarea";
 
 function Home({ menu, firstCategory }: HomeProps) {
   const [directionPrimary, setDirectionPrimary] = useState<boolean>(true);
@@ -60,6 +61,7 @@ function Home({ menu, firstCategory }: HomeProps) {
         </Tag>
         <Rating rating={rating} isEditable={true} setRating={setRating} />
         <Input placeholder="Test"/>
+        <Textarea placeholder="Test textarea"/>
       </>
     </>
   );

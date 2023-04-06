@@ -1,4 +1,4 @@
-.input {
+.textarea {
 	padding: 7px 12px;
 
 	font-family: var(--font-family);
@@ -14,7 +14,7 @@
 	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
 }
 
-.input::placeholder {
+.textarea::placeholder {
 	color:#A4A4A4;;
 }
 

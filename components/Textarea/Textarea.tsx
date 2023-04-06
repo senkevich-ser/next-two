@@ -4,6 +4,6 @@ import cn from 'classnames';
 
 export default function Textarea({className,...props}:TextareaProps):JSX.Element{
 return(
- <textarea className={cn(styles.input,className)} {...props}/>
+ <textarea className={cn(styles.textarea,className)} {...props}/>
 );
 }

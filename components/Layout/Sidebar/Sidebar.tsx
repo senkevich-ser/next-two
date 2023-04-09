@@ -4,6 +4,7 @@ import cn from "classnames";
 import Menu from "../Menu/Menu";
 import Logo from '../logo.svg';
 import Link from "next/link";
+import Search from "@/components/Search/Search";
 
 export default function Sidebar({
   className,...props
@@ -15,7 +16,7 @@ export default function Sidebar({
     ><Link href={'/'}>
       <Logo className={styles.logo}/>
       </Link>
-      <h3>Поиск</h3>
+      <Search/>
       <Menu/>
     </div>
   );

@@ -9,6 +9,7 @@ import Sort from "@/components/Sort/Sort";
 import { SortEnum } from "@/components/Sort/Sort.props";
 import { useReducer } from "react";
 import { sortReducer } from "./sort.reducer";
+import Product from "@/components/Product/Product";
 
 
 export default function TopPageComponent({firstCategory,page,products}:TopPageComponentProps):JSX.Element{
@@ -29,7 +30,7 @@ return(
       <Sort sort={sort} setSort={setSort}/>
       </div>
      <div className={styles.products}>
-      {sortedProducts&&sortedProducts.map(p=><div key={p._id}>{p.title}</div>)}
+      {sortedProducts&&sortedProducts.map(p=><Product product={p} key={p._id}/>)}
      </div>
      <div className={styles.hhTitle}>
         <HTag tag='h2'>Вакансии - {page.category}</HTag>

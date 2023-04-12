@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 import Image from "next/image";
 import Rating from "../Rating/Rating";
 import Tag from "../Tag/Tag";
+import Button from "../Button/Button";
 
 export default function Product({
   product,
@@ -29,6 +30,24 @@ export default function Product({
       <div className={styles.pricetitle}>цена</div>
       <div className={styles.credittitle}>в кредит</div>
       <div className={styles.ratetitle}>{product.reviewCount} отзывов</div>
+      <div className={styles.hr}><hr/></div>
+      <div className={styles.description}>{product.description}</div>
+      <div className={styles.feature}>фичи</div>
+      <div className={styles.advblock}>
+      <div className={styles.advantages}>
+        <div>Преимущества</div>
+        <div>{product.advantages}</div>
+      </div>
+      <div className={styles.advantages}>
+        <div>Недостатки</div>
+        <div>{product.disadvantages}</div>
+      </div>
+      </div>
+      <div className={styles.hr}><hr/></div>
+      <div className={styles.actions}>
+        <Button appearance="primary">Узнать подробнее</Button>
+        <Button appearance="ghost" arrow="right">Читать отзывы</Button>
+      </div>
     </Card>
   );
 }

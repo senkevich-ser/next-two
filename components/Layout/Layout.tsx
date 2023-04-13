@@ -1,14 +1,14 @@
 import { LayoutProps } from "./Layout.props";
 import styles from "./Layout.module.css";
 import cn from "classnames";
-import {  Inter } from "@next/font/google";
+import {  Noto_Sans } from "@next/font/google";
 import Footer from "./Footer/Footer";
 import Sidebar from "./Sidebar/Sidebar";
 import Header from "./Header/Header";
 import { FunctionComponent } from "react";
 import { AppContextProvider, IAppContext } from "@/context/app.context";
 
-const montserrat = Inter({
+const montserrat = Noto_Sans({
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal"],
   subsets: ["latin"],

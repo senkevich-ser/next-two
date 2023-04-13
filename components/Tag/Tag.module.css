@@ -43,3 +43,9 @@
 	color:var(--white);
 	background-color: var(--grey);
 }
+
+.green{
+	color: #1DC37E;
+	background-color: #C8F8E4;
+	margin: 0;
+}

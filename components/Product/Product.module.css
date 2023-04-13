@@ -8,13 +8,14 @@
 .logo{
 	grid-column: start/logoend;
 	grid-row: 1 / span 2;
+	margin-bottom: 18px;
 }
 
 .title, .tags{
 	grid-column: titlestart/middle;
 }
 
-.price, .pricetitle{
+.priceblock, .pricetitle{
 	grid-column: pricestart/priceend;
 }
 
@@ -26,11 +27,7 @@
 	grid-column:ratestart/end;
 }
 
-.hr{
-	grid-column:start/end;	
-}
-
-.description{
+.hr,.description,.actions{
 	grid-column:start/end;	
 }
 
@@ -42,6 +39,59 @@
 	grid-column:middle/end;
 }
 
-.actions{
-	grid-column:start/end;	
+.logo img{
+	border-radius: 5px;
 }
+
+.title{
+	align-self: flex-end;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	margin-bottom: 9px;
+}
+
+.price,.credit,.rate{
+	align-self: flex-end;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27px;
+	margin-bottom: 9px;
+}
+
+.month{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+
+.pricetitle,.credittitle,.ratetitle{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.priceblock{
+	display: grid;
+	grid-template-columns: 1fr auto ;
+	align-items: center;
+	gap: 10px;
+}
+
+.description{
+	padding: 20px 0;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.advantages{
+	border-left: solid 2px var(--green);
+}
+
+.disadvantages{
+	border-left: solid 2px var(--red);
+}
+
+ 

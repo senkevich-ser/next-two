@@ -11,6 +11,7 @@ return(
     [styles.red]:color=='red',
     [styles.ghost]:color=='ghost',
     [styles.primary]:color=='primary',
+    [styles.green]:color=='green',
   })}{...props}>{children}</div>
 );
 }

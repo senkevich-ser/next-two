@@ -47,7 +47,13 @@ export default function Product({
       <div className={styles.ratetitle}>{product.reviewCount} отзывов</div>
       <Divider className={styles.hr} />
       <div className={styles.description}>{product.description}</div>
-      <div className={styles.feature}>фичи</div>
+      <div className={styles.feature}>
+        {product.characteristics.map((c)=><div key={c.value} className={styles.featureitem}>
+          <div className={styles.featuretitle}>{c.name}</div>
+          <div className={styles.featuredotes}></div>
+          <div className={styles.featurevalue}>{c.value}</div>
+        </div>)}
+      </div>
       <div className={styles.advblock}>
         {product.advantages && <div className={styles.advantages}>
           <div className={styles.advantagestitle}>Преимущества</div>

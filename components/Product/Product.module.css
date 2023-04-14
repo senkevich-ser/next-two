@@ -120,6 +120,35 @@
 	margin-left: 20px;
 }
 
+
+.featureitem{
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 15px;
+	padding-right: 60px;
+}
+
+.featuredotes{
+	border-top: 1px dashed var(--light-grey);
+	align-self: flex-end;
+	margin-bottom: 10px;
+}
+
+.featuretitle{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 32px;
+}
+
+.featurevalue{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	align-self: center;
+}
+
+
+
 @media (max-width:1400px){
 	.product {
 		grid-template-columns: [start] 70px [logoend] 15px [titlestart] calc(50% - 100px) [middle] 1fr [pricestart] auto [priceend] 20px [creditstart] auto [creditend] 20px [ratestart] auto [end];

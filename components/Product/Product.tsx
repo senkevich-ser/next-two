@@ -50,18 +50,18 @@ export default function Product({
       <div className={styles.feature}>фичи</div>
       <div className={styles.advblock}>
         {product.advantages && <div className={styles.advantages}>
-          <div>Преимущества</div>
-          <div>{product.advantages}</div>
+          <div className={styles.advantagestitle}>Преимущества</div>
+          <div className={styles.advantagestext}>{product.advantages}</div>
         </div>}
         {product.advantages && <div className={styles.disadvantages}>
-          <div>Недостатки</div>
-          <div>{product.advantages}</div>
+          <div className={styles.advantagestitle}>Недостатки</div>
+          <div className={styles.advantagestext}>{product.advantages}</div>
         </div>}
       </div>
       <Divider className={styles.hr} />
       <div className={styles.actions}>
         <Button appearance="primary">Узнать подробнее</Button>
-        <Button appearance="ghost" arrow="right">
+        <Button appearance="ghost" arrow="right" className={styles.reviewbutton}>
           Читать отзывы
         </Button>
       </div>

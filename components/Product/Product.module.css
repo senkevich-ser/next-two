@@ -1,6 +1,8 @@
 .product {
 	display: grid;
 	grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px) [middle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto [end];
+	gap: 10px 0;
+
 	margin-bottom: 30px;
 	padding: 30px;
 }
@@ -45,53 +47,82 @@
 
 .title{
 	align-self: flex-end;
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 27px;
+
 	margin-bottom: 9px;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 27px;
 }
 
 .price,.credit,.rate{
 	align-self: flex-end;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 27px;
+
 	margin-bottom: 9px;
+
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 27px;
 }
 
 .month{
-	font-weight: 400;
 	font-size: 14px;
+	font-weight: 400;
 	line-height: 19px;
 }
 
 
 .pricetitle,.credittitle,.ratetitle{
-	font-weight: 400;
 	font-size: 14px;
+	font-weight: 400;
 	line-height: 19px;
 }
 
 .priceblock{
 	display: grid;
 	grid-template-columns: 1fr auto ;
-	align-items: center;
 	gap: 10px;
+	align-items: center;
 }
 
 .description{
 	padding: 20px 0;
-	font-weight: 400;
 	font-size: 16px;
+	font-weight: 400;
 	line-height: 24px;
 }
 
 .advantages{
-	border-left: solid 2px var(--green);
+	margin-bottom: 20px;
+	padding-left: 15px;
+	border-left: solid 3px var(--green);
 }
 
 .disadvantages{
-	border-left: solid 2px var(--red);
+	padding-left: 15px;
+	border-left: solid 3px var(--red);
 }
 
+.advantagestitle{
+	margin-bottom: 5px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 22px;
+}
+
+.advantagestext{
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.reviewbutton{
+	margin-left: 20px;
+}
+
+@media (max-width:1400px){
+	.product {
+		grid-template-columns: [start] 70px [logoend] 15px [titlestart] calc(50% - 100px) [middle] 1fr [pricestart] auto [priceend] 20px [creditstart] auto [creditend] 20px [ratestart] auto [end];
+	}
+}
  

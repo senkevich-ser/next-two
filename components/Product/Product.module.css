@@ -129,22 +129,22 @@
 }
 
 .featuredotes{
-	border-top: 1px dashed var(--light-grey);
 	align-self: flex-end;
 	margin-bottom: 10px;
+	border-top: 1px dashed var(--light-grey);
 }
 
 .featuretitle{
-	font-weight: 700;
 	font-size: 16px;
+	font-weight: 700;
 	line-height: 32px;
 }
 
 .featurevalue{
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 22px;
 	align-self: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 22px;
 }
 
 

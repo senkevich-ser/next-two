@@ -7,7 +7,7 @@ import Rating from "../Rating/Rating";
 import Tag from "../Tag/Tag";
 import Button from "../Button/Button";
 import Divider from "../Divider/Divider";
-import { priceRu } from "@/helpers/helpers";
+import { decOfNumber, priceRu } from "@/helpers/helpers";
 
 export default function Product({
   product,
@@ -44,7 +44,7 @@ export default function Product({
       </div>
       <div className={styles.pricetitle}>цена</div>
       <div className={styles.credittitle}>в кредит</div>
-      <div className={styles.ratetitle}>{product.reviewCount} отзывов</div>
+      <div className={styles.ratetitle}>{product.reviewCount} {decOfNumber(product.reviewCount,['отзыв','отзыва','отзывов'])}</div>
       <Divider className={styles.hr} />
       <div className={styles.description}>{product.description}</div>
       <div className={styles.feature}>

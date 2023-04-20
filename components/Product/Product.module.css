@@ -53,6 +53,7 @@
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 27px;
+	white-space: normal;
 }
 
 .price,.credit,.rate{
@@ -63,6 +64,8 @@
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 27px;
+
+	white-space: nowrap;
 }
 
 .month{
@@ -82,7 +85,11 @@
 	display: grid;
 	grid-template-columns: 1fr auto ;
 	gap: 10px;
-	align-items: center;
+}
+
+.oldprice{
+	align-self: flex-end;
+	margin-bottom: 10px;
 }
 
 .description{
@@ -151,7 +158,81 @@
 
 @media (max-width:1400px){
 	.product {
-		grid-template-columns: [start] 70px [logoend] 15px [titlestart] calc(50% - 100px) [middle] 1fr [pricestart] auto [priceend] 20px [creditstart] auto [creditend] 20px [ratestart] auto [end];
+		grid-template-columns:  70px  30px  auto  40px  auto  40px 1fr ;
+		grid-template-areas: 
+			"logo . title title title title title "
+			"logo . tags tags tags tags tags "
+			"priceblock priceblock priceblock . credit . rate "
+			"pricetitle pricetitle pricetitle . credittitle . ratetitle "
+			"hr hr hr hr hr hr hr "
+			"description description description description description description description "
+			"feature feature feature feature feature feature feature "
+			"advblock advblock advblock advblock advblock advblock advblock "
+			"hr2 hr2 hr2 hr2 hr2 hr2 hr2 "
+			"actions actions actions actions actions actions actions "
+			;
+
 	}
+
+	.logo{
+		grid-area: logo;
+	}
+
+	.title{
+		grid-area: title;
+	}
+
+	.tags{
+		grid-area: tags;
+	}
+
+	.priceblock{
+		grid-area: priceblock;
+	}
+
+	.credit{
+		grid-area: credit;
+	}
+
+	.rate{
+		grid-area: rate;
+	}
+
+	.pricetitle{
+		grid-area: pricetitle;
+	}
+
+	.credittitle{
+		grid-area: credittitle;
+	}
+
+	.ratetitle{
+		grid-area: ratetitle;
+	}
+
+	.hr{
+		grid-area: hr;
+	}
+
+	.description{
+		grid-area: description;
+	}
+
+	.feature{
+		grid-area: feature;
+	}
+
+	.advblock{
+		grid-area: advblock;
+	}
+
+	.hr2{
+		grid-area: hr2;
+	}
+
+	.actions{
+		grid-area: actions;
+	}
+
 }
  

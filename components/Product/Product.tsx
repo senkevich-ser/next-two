@@ -27,7 +27,7 @@ export default function Product({
       <div className={styles.title}>{product.title}</div>
       <div className={styles.priceblock}>
       <div className={styles.price}>{priceRu(product.price)}</div>
-      {product.oldPrice && <Tag color="green">{priceRu(product.price-product.oldPrice)}</Tag>}
+      {product.oldPrice && <Tag className={styles.oldprice} color="green">{priceRu(product.price-product.oldPrice)}</Tag>}
       </div>
       <div className={styles.credit}>
         {priceRu(product.credit)} / <span className={styles.month}> в мес</span>
@@ -64,7 +64,7 @@ export default function Product({
           <div className={styles.advantagestext}>{product.advantages}</div>
         </div>}
       </div>
-      <Divider className={styles.hr} />
+      <Divider className={cn(styles.hr,styles.hr2)} />
       <div className={styles.actions}>
         <Button appearance="primary">Узнать подробнее</Button>
         <Button appearance="ghost" arrow="right" className={styles.reviewbutton}>

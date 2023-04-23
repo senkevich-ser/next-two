@@ -7,6 +7,7 @@
 	padding: 5px 11px;
 
 	text-align: center;
+	white-space: nowrap;
 
 	background-color: var(--white);
 	border-radius: 20px;

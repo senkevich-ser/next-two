@@ -44,3 +44,9 @@
 	font-weight: 400;
 	line-height: 27px;   
 }
+
+@media (max-width:880px) {
+	.title{
+		grid-template-columns: auto 1fr ;
+	}
+}

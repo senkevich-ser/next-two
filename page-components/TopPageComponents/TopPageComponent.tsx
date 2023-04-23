@@ -10,6 +10,7 @@ import { SortEnum } from "@/components/Sort/Sort.props";
 import { useReducer } from "react";
 import { sortReducer } from "./sort.reducer";
 import Product from "@/components/Product/Product";
+import { TopLevelCategory } from "@/interfaces/page.interface";
 
 
 export default function TopPageComponent({firstCategory,page,products}:TopPageComponentProps):JSX.Element{
@@ -36,7 +37,7 @@ return(
         <HTag tag='h2'>Вакансии - {page.category}</HTag>
         <Tag color="red" size='large'>hh.ru</Tag>
       </div>
-      {page.hh && page.hh && <HhData {...page.hh}/>}
+      {firstCategory == TopLevelCategory.Courses && page.hh && page.hh && <HhData {...page.hh}/>}
       <HTag tag='h2'>Преимущества</HTag>
       {page.advantages &&<Advantages advantages={page.advantages}/>}
       {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html:page.seoText}}></div>}

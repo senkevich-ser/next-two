@@ -35,18 +35,18 @@ export default function Product({
       <div className={styles.rate}>
         <Rating rating={product.reviewAvg ?? product.initialRating} />
       </div>
-      <div className={styles.tags}>
+     { <div className={styles.tags}>
         {product.categories.map((c) => (
           <Tag key={c} color="primary">
             {c}
           </Tag>
         ))}
-      </div>
+      </div>}
       <div className={styles.pricetitle}>цена</div>
       <div className={styles.credittitle}>в кредит</div>
       <div className={styles.ratetitle}>{product.reviewCount} {decOfNumber(product.reviewCount,['отзыв','отзыва','отзывов'])}</div>
-      <Divider className={styles.hr} />
-      <div className={styles.description}>{product.description}</div>
+      {<Divider className={styles.hr} />}
+     { <div className={styles.description}>{product.description}</div>}
       <div className={styles.feature}>
         {product.characteristics.map((c)=><div key={c.value} className={styles.featureitem}>
           <div className={styles.featuretitle}>{c.name}</div>
@@ -64,13 +64,13 @@ export default function Product({
           <div className={styles.advantagestext}>{product.advantages}</div>
         </div>}
       </div>
-      <Divider className={cn(styles.hr,styles.hr2)} />
-      <div className={styles.actions}>
+      {<Divider className={cn(styles.hr,styles.hr2)} />}
+      {<div className={styles.actions}>
         <Button appearance="primary">Узнать подробнее</Button>
         <Button appearance="ghost" arrow="right" className={styles.reviewbutton}>
           Читать отзывы
         </Button>
-      </div>
+      </div>}
     </Card>
   );
 }

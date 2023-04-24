@@ -25,11 +25,11 @@ return(
      <Head>
         <title>{page.title}</title>
       </Head>
-      <div className={styles.title}>
+     { <div className={styles.title}>
         <HTag tag='h1'>{page.title}</HTag>
         {products &&<Tag color="grey" size="large">{products.length}</Tag>}
       <Sort sort={sort} setSort={setSort}/>
-      </div>
+      </div>}
      <div className={styles.products}>
       {sortedProducts&&sortedProducts.map(p=><Product product={p} key={p._id}/>)}
      </div>

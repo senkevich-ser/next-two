@@ -8,6 +8,8 @@
 	gap: 20px 30px;
 
 	margin-top: 30px;
+
+	align-items: center;
 }
 
 .description, .submit{
@@ -22,8 +24,28 @@
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap:20px;
+	align-items: center;
 }
 
 .disclamer{
 	margin-left: 15px;
+}
+
+.success{
+	position: relative;
+	margin-top: 20px;
+	background: var(--light-green);
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.successicon{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.successtitle{
+	font-weight: bold;
 }

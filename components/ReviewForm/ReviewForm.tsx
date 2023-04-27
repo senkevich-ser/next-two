@@ -23,7 +23,7 @@ export default function ReviewForm({
     <Textarea className={styles.description}/>
     <div className={styles.submit}>
       <Button appearance="primary">Отправить</Button>
-      <span>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
+      <span className={styles.disclamer}>* Перед публикацией отзыв пройдет предварительную модерацию и проверку</span>
     </div>
     </div>
   );

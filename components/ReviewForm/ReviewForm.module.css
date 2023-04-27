@@ -6,6 +6,8 @@
 	display: grid;
 	grid-template-columns: [start] auto 1fr auto [end];
 	gap: 20px 30px;
+
+	margin-top: 30px;
 }
 
 .description, .submit{
@@ -18,5 +20,10 @@
 
 .rating{
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: auto 1fr;
+	gap:20px;
+}
+
+.disclamer{
+	margin-left: 15px;
 }

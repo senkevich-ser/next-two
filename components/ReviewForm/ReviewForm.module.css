@@ -1,0 +1,22 @@
+.reviewform {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+
+	display: grid;
+	grid-template-columns: [start] auto 1fr auto [end];
+	gap: 20px 30px;
+}
+
+.description, .submit{
+	grid-column: start/end;
+}
+
+.title{
+	justify-self: left;
+}
+
+.rating{
+	display: grid;
+	grid-template-columns: 1fr;
+}

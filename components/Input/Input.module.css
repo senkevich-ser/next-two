@@ -12,6 +12,9 @@
 	border-radius: 5px;
 	outline-color: var(--primary);
 	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
+
+	min-width: 219px;
+	max-width: 218px;
 }
 
 .input::placeholder {

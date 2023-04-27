@@ -10,6 +10,7 @@ import Divider from "../Divider/Divider";
 import { decOfNumber, priceRu } from "@/helpers/helpers";
 import { useState } from "react";
 import Review from "../Review/Review";
+import ReviewForm from "../ReviewForm/ReviewForm";
 
 export default function Product({
   product,
@@ -107,7 +108,11 @@ export default function Product({
           [styles.close]: !isReviewOpened,
         })}
       >
-        {product.reviews && product.reviews.map((r)=><Review review={r}/>)}
+        {product.reviews && product.reviews.map((r)=><>
+        <Review review={r}/>
+        <Divider className={cn(styles.hr, styles.hr2)} />
+        </>)}
+        <ReviewForm productId={product._id}/>
       </Card>
     </>
   );

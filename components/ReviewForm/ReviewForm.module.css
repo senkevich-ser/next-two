@@ -1,15 +1,14 @@
 .reviewform {
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 24px;
-
 	display: grid;
 	grid-template-columns: [start] auto 1fr auto [end];
 	gap: 20px 30px;
+	align-items: center;
 
 	margin-top: 30px;
 
-	align-items: center;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
 }
 
 .description, .submit{
@@ -33,17 +32,19 @@
 
 .success{
 	position: relative;
+
 	margin-top: 20px;
+	padding: 20px;
+
 	background: var(--light-green);
 	border-radius: 5px;
-	padding: 20px;
 }
 
 .successicon{
+	cursor: pointer;
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	cursor: pointer;
 }
 
 .successtitle{

@@ -108,10 +108,10 @@ export default function Product({
           [styles.close]: !isReviewOpened,
         })}
       >
-        {product.reviews && product.reviews.map((r)=><>
+        {product.reviews && product.reviews.map((r)=><div key={r._id}>
         <Review review={r}/>
         <Divider className={cn(styles.hr, styles.hr2)} />
-        </>)}
+        </div>)}
         <ReviewForm productId={product._id}/>
       </Card>
     </>

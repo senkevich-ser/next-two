@@ -6,6 +6,8 @@ import Rating from "../Rating/Rating";
 import Button from "../Button/Button";
 import Textarea from "../Textarea/Textarea";
 import CloseIcon from './close.svg';
+import { IReviewForm } from "./ReviewForm.interface";
+import { useForm } from "react-hook-form";
 
 
 export default function ReviewForm({
@@ -13,6 +15,8 @@ export default function ReviewForm({
   className,
   ...props
 }: ReviewFormProps): JSX.Element {
+
+  const{register,control,handleSubmit}=useForm<IReviewForm>();
   return (
     <>
     <div className={cn(styles.reviewform, className)} {...props}>  

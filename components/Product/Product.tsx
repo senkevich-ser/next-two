@@ -3,7 +3,7 @@ import styles from "./Product.module.css";
 import cn from "classnames";
 import Card from "../Card/Card";
 import Image from "next/image";
-import Rating from "../Rating/Rating";
+import {Rating} from "../Rating/Rating";
 import Tag from "../Tag/Tag";
 import Button from "../Button/Button";
 import Divider from "../Divider/Divider";

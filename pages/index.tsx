@@ -4,13 +4,13 @@ import Button from "@/components/Button/Button";
 import Paragraph from "@/components/Paragraph/Paragraph";
 import Tag from "@/components/Tag/Tag";
 import { useState } from "react";
-import Rating from "@/components/Rating/Rating";
+import {Rating} from "@/components/Rating/Rating";
 import { withLayout } from "@/components/Layout/Layout";
 import axios from "axios";
 import { GetStaticProps } from "next";
 import { MenuItem } from "../interfaces/menu.interface";
-import Input from "@/components/Input/Input";
-import Textarea from "@/components/Textarea/Textarea";
+import {Input} from "@/components/Input/Input";
+import {Textarea} from "@/components/Textarea/Textarea";
 
 function Home({ menu, firstCategory }: HomeProps) {
   const [directionPrimary, setDirectionPrimary] = useState<boolean>(true);

@@ -1,11 +1,13 @@
 import { ReviewFormProps } from "./ReviewForm.props";
 import styles from "./ReviewForm.module.css";
 import cn from "classnames";
-import Rating from "../Rating/Rating";
+import {Rating} from "../Rating/Rating";
 import Button from "../Button/Button";
 import CloseIcon from "./close.svg";
 import { IReviewForm } from "./ReviewForm.interface";
 import { Controller, useForm } from "react-hook-form";
+import { Input } from "../Input/Input";
+import { Textarea } from "../Textarea/Textarea";
 
 export default function ReviewForm({
   productId,
@@ -19,12 +21,12 @@ export default function ReviewForm({
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={cn(styles.reviewform, className)} {...props}>
-        <input
+        <Input
           {...register("name")}
           placeholder="Имя"
           className={styles.input}
         />
-        <input
+        <Input
           {...register("title")}
           className={cn(styles.title, styles.input)}
           placeholder="Заголовок отзыва"
@@ -39,11 +41,12 @@ export default function ReviewForm({
                 rating={field.value}
                 isEditable
                 setRating={field.onChange}
+                ref={field.ref}
               />
             )}
           />
         </div>
-        <textarea
+        <Textarea
           {...register("description")}
           className={cn(styles.description, styles.textarea)}
           placeholder="Текст отзыва"

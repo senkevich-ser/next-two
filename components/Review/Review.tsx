@@ -4,7 +4,7 @@ import cn from "classnames";
 import UserIcon from "./user.svg";
 import {format} from 'date-fns';
 import {ru} from 'date-fns/locale';
-import Rating from "../Rating/Rating";
+import {Rating} from "../Rating/Rating";
 
 export default function Review({
   review,

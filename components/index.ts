@@ -7,7 +7,7 @@ export*from './Card/Card';
 export*from './HhData/HhData';
 export*from './Advantages/Advantages';
 export*from './Sort/Sort';
-export*from './Input/Input';
+export*from'./Input/Input';
 export*from'./Product/Product';
 export*from'./Divider/Divider';
 export*from'./Review/Review';

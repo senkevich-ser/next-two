@@ -9,7 +9,7 @@ export const Input = forwardRef(
     ref: ForwardedRef<HTMLInputElement>
   ): JSX.Element => {
     return (
-      <div className={styles.errorWrapper}>
+      <div className={cn(styles.errorWrapper,className)}>
         <input
           className={cn(
             styles.input,

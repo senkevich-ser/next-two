@@ -9,7 +9,7 @@ export const Textarea = forwardRef(
     ref: ForwardedRef<HTMLTextAreaElement>
   ): JSX.Element => {
     return (
-      <div className={styles.errorWrapper}>
+      <div className={cn(styles.errorWrapper,className)}>
         <textarea
           className={cn(
             styles.textarea,

@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .input {
 	padding: 7px 12px;
 
@@ -18,3 +19,19 @@
 	color:#A4A4A4;;
 }
 
+.errorWrapper{
+	position: relative;
+}
+
+.error{
+	border: 1px solid var(--red);
+}
+
+.errorMessage{
+	position: absolute;
+	bottom: -22px;
+	left: 0;
+
+	font-size: 12px;
+	color: var(--red);
+}

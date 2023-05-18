@@ -11,6 +11,7 @@ import { GetStaticProps } from "next";
 import { MenuItem } from "../interfaces/menu.interface";
 import {Input} from "@/components/Input/Input";
 import {Textarea} from "@/components/Textarea/Textarea";
+import { API } from "@/helpers/api";
 
 function Home({ menu, firstCategory }: HomeProps) {
   const [directionPrimary, setDirectionPrimary] = useState<boolean>(true);
@@ -71,7 +72,7 @@ export default withLayout(Home);
 export const getStaticProps: GetStaticProps = async () => {
   const firstCategory = 0;
   const { data: menu } = await axios.post<MenuItem[]>(
-    process.env.NEXT_PUBLIC_DOMAIN + "/api/top-page/find",
+    API.topPage.find,
     {
       firstCategory,
     }
